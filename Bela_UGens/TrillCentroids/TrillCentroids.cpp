@@ -206,7 +206,7 @@ void TrillCentroids_next_k(TrillCentroids* unit, int inNumSamples) {
   // write horizontal touches
   touches = min(NUM_TOUCH, unit->sensor->getNumHorizontalTouches());
   safeWrite(unit, offset++, touches);
-  for(int i = 0; i < touches; i++) {
+  for(unsigned int i = 0; i < NUM_TOUCH; i++) {
     float location = 0;
     float size = 0;
     if(i < touches) {
