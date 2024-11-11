@@ -77,8 +77,9 @@ static void updateTrill(TrillCentroids* unit)
     if(ret) {
       fprintf(stderr, "Error reading sensor: %d\n", ret);
       unit->enable = false;
+      break;
     }
-    usleep(unit->readInterval);
+    usleep(unit->readInterval * 1000);
   } // while
 }
 
