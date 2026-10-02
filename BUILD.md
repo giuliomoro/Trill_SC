@@ -67,7 +67,9 @@ If you are building against a non-installed version of SuperCollider, you should
 ## Copy the compiled shared object (.so) into the ext directory
 
 ```
-> mv TrillCentroids.so ../../../ext/Trill/
+> mv TrillCentroids.so ../../../ext/armv7/Trill/
+# or, depending on platform
+> mv TrillCentroids.so ../../../ext/arm64/Trill/
 ```
 
 ***remember to symlink this extensions directory to your SC Extensions***
@@ -83,7 +85,7 @@ You can save some time in your workflow by running the server and running the la
 You can also combine the whole make/mv/scsynth process with a single line.
 
 ```
-> make && mv TrillCentroids.so ../../../ext/Trill/ && scsynth -u 57110 -z 16 -J 8 -K 8 -G 16 -i 2 -o 2
+> make && mv TrillCentroids.so ../../../ext/armv7/Trill/ && scsynth -u 57110 -z 16 -J 8 -K 8 -G 16 -i 2 -o 2 # or ext/arm64
 ```
 
 ...then on your laptop you can remotely attach to the server...

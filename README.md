@@ -26,7 +26,11 @@ your.pc> ssh root@192.168.7.2
 3. Make a symbolic link inside the SuperCollider extensions directory to the UGen files.
 *nice to know: on Linux the extensions directory is `~/.local/share/SuperCollider/Extensions`
 ```
-bela> ln -s ~/Trill_SC/ext/Trill ~/.local/share/SuperCollider/Extensions
+bela> ln -s ~/Trill_SC/ext/armv7/Trill ~/.local/share/SuperCollider/Extensions # for Bela and Bela Mini
+```
+or
+```
+bela> ln -s ~/Trill_SC/ext/arm64/Trill ~/.local/share/SuperCollider/Extensions # for Gem
 ```
 
 4. ***(Not required)*** Make symbolic links to all the example projects.
