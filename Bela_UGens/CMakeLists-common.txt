@@ -44,7 +44,7 @@ if (SUPERNOVA)
     include_directories(${SC_PATH}/external_libraries/boost-lockfree)
 endif()
 
-option(CPP11 "Build with c++11." ON)
+option(CPP14 "Build with c++14." ON)
 
 if(CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
 	set(CMAKE_COMPILER_IS_CLANG 1)
@@ -107,8 +107,8 @@ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_COMPILER_IS_CLANG)
         add_definitions(-march=native)
     endif()
 
-    # Plugin headers require C++11, which must be explicitly enabled for gcc and clang.
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+    # Plugin headers require C++14, which must be explicitly enabled for gcc and clang.
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
     if(CMAKE_COMPILER_IS_CLANG)
         set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -stdlib=libc++")
     endif()
